@@ -2,105 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ze520.cn/posts/e70dc2a1.html</loc>
+    <loc>https://tc2006.site/posts/b5af289.html</loc>
     
     <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/b5af289.html</loc>
+    <loc>https://tc2006.site/posts/77bb149f.html</loc>
     
     <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/77bb149f.html</loc>
+    <loc>https://tc2006.site/posts/e70dc2a1.html</loc>
     
     <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/about/index.html</loc>
+    <loc>https://tc2006.site/posts/a20b06b8.html</loc>
     
     <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/a20b06b8.html</loc>
+    <loc>https://tc2006.site/List/music/index.html</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tc2006.site/about/index.html</loc>
+    
+    <lastmod>2022-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://tc2006.site/List/gallery/wallpaper/index.html</loc>
     
     <lastmod>2022-04-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/List/gallery/wallpaper/index.html</loc>
+    <loc>https://tc2006.site/List/gallery/index.html</loc>
     
     <lastmod>2022-04-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/List/gallery/index.html</loc>
-    
-    <lastmod>2022-04-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/comments/index.html</loc>
+    <loc>https://tc2006.site/comments/index.html</loc>
     
     <lastmod>2021-11-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/link/index.html</loc>
+    <loc>https://tc2006.site/link/index.html</loc>
     
     <lastmod>2021-07-27</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/tags/index.html</loc>
+    <loc>https://tc2006.site/tags/index.html</loc>
     
     <lastmod>2021-07-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/categories/index.html</loc>
+    <loc>https://tc2006.site/categories/index.html</loc>
     
     <lastmod>2021-07-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/music/index.html</loc>
+    <loc>https://tc2006.site/music/index.html</loc>
     
     <lastmod>2021-07-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/List/movies/index.html</loc>
+    <loc>https://tc2006.site/List/movies/index.html</loc>
     
     <lastmod>2021-07-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/List/music/index.html</loc>
-    
-    <lastmod>2021-07-26</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/archives/index.html</loc>
+    <loc>https://tc2006.site/archives/index.html</loc>
     
     <lastmod>2021-06-27</lastmod>
     
@@ -108,13 +108,48 @@
   
 
   <url>
-    <loc>http://ze520.cn/</loc>
+    <loc>https://tc2006.site/</loc>
     <lastmod>2022-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://tc2006.site/tags/%E7%9F%A5%E8%AF%86%E5%B0%B1%E6%98%AF%E5%8A%9B%E9%87%8F/</loc>
+    <lastmod>2022-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tc2006.site/tags/%E7%8F%AD%E4%BC%9A/</loc>
+    <lastmod>2022-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tc2006.site/tags/%E5%90%8D%E4%BA%BA/</loc>
+    <lastmod>2022-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://tc2006.site/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/</loc>
+    <lastmod>2022-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://tc2006.site/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/%E7%BE%8E%E7%AF%87/</loc>
+    <lastmod>2022-04-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
 </urlset>
