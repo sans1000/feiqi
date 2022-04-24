@@ -2,44 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ze520.cn/comments/index.html</loc>
+    <loc>http://ze520.cn/posts/e70dc2a1.html</loc>
     
-    <lastmod>2021-11-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/List/gallery/index.html</loc>
-    
-    <lastmod>2021-10-14</lastmod>
+    <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/List/gallery/wallpaper/index.html</loc>
+    <loc>http://ze520.cn/posts/b5af289.html</loc>
     
-    <lastmod>2021-10-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ze520.cn/List/gallery/ohmygirl/index.html</loc>
-    
-    <lastmod>2021-09-28</lastmod>
+    <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ze520.cn/posts/1.html</loc>
+    <loc>http://ze520.cn/posts/77bb149f.html</loc>
     
-    <lastmod>2021-09-07</lastmod>
+    <lastmod>2022-04-24</lastmod>
     
   </url>
   
   <url>
     <loc>http://ze520.cn/about/index.html</loc>
     
-    <lastmod>2021-08-02</lastmod>
+    <lastmod>2022-04-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/posts/a20b06b8.html</loc>
+    
+    <lastmod>2022-04-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/List/gallery/wallpaper/index.html</loc>
+    
+    <lastmod>2022-04-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/List/gallery/index.html</loc>
+    
+    <lastmod>2022-04-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ze520.cn/comments/index.html</loc>
+    
+    <lastmod>2021-11-23</lastmod>
     
   </url>
   
@@ -95,26 +109,12 @@
 
   <url>
     <loc>http://ze520.cn/</loc>
-    <lastmod>2022-04-22</lastmod>
+    <lastmod>2022-04-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
-  <url>
-    <loc>http://ze520.cn/tags/%E6%83%B3%E6%B3%95/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
-  
-  <url>
-    <loc>http://ze520.cn/categories/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2022-04-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
 </urlset>
