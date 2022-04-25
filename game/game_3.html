@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset = "UTF-8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+<title>打砖块游戏</title>
+	// 搭建画布
+	<style>
+     #box {
+      width: 600px;
+      height: 650px;
+      border: 5px solid rgb(168, 139, 8);
+      position: relative;
+      left: 500px;
+      background: linear-gradient(rgb(19, 192, 120), rgb(47, 32, 114));
+     }
+     #ball {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background-color: white;
+      position: absolute;
+      top: 560px;
+      box-shadow: 0px 0px 3px 3px aqua;
+     }
+     #btn {
+      width: 150px;
+      height: 90px;
+      position: fixed;
+      left: 730px;
+      top: 350px;
+      border-radius: 10px;
+      font-size: 24px;
+      cursor: pointer;
+     }
+     #slide {
+      width: 120px;
+      height: 20px;
+      background-color: rgb(168, 139, 8);
+      position: absolute;
+      top: 585px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 2px 2px red;
+      cursor: pointer;
+     }
+     #brick div {
+      width: 98px;
+      height: 20px;
+      float: left;
+      border: 1px solid black;
+     }
+     #tip {
+      width: 280px;
+      position: fixed;
+      top: 100px;
+      left: 150px;
+      border: 1px solid black;
+      text-indent: 2em;
+      padding: 10px;
+      border-radius: 20px;
+     }
+     #grade {
+      width: 180px;
+      position: fixed;
+      top: 100px;
+      left: 1150px;
+      border: 1px solid black;
+      text-indent: 2em;
+      padding: 10px;
+      border-radius: 20px;
+     }
+     #grade h3 {
+      font-weight: 500;
+     }
+	</style>
+</head>
+<body>
+	// 规则与难度
+	<div id = "box">
+		<div id = "ball"></div>
+		<div id = "slide"></div>
+		<div id = "brick"></div>
+	</div>
+ 	<div id = "tip">
+	 	<h1>游戏规则：</h1>
+	 	<p>方法1：使用鼠标按住滑块左右拖动</p>
+	 	<p>方法2：使用键盘“左”“右”方向键控制滑块移动</p>
+	 	<p>小球碰到底就 KO 了</p>
+	 	<p>打完所有方块就赢了</p>
+	 	<p>每局游戏难度随机生成，不喜欢可以F5刷新一下</p>
+ 	</div>
+ 	<div id = "grade">
+	 	<h3>难度：</h3>
+	 	<h2>XXX</h2>
+	 	<h3>得分：</h3>
+ 	<h1>0</h1>
+   </div>
+   <button id = "btn">开始游戏</button>
+   <script>
+   var box = document.getElementById("box");
+   var ball = document.getElementById("ball");
+   var btn = document.getElementById("btn");
+   var slide = document.getElementById("slide")
+   var obrick = document.getElementById("brick")
+   var brick_ = obrick.getElementsByTagName("div")
+   var grade = document.getElementById("grade")
+   var rk = grade.children[1]
+   var sc = grade.children[3]
+   var sco = 0;
+   var timer;
+   var isRunning = false;
+   var vx = rand(3, 12);
+   var vy = -rand(3, 12);
+   var num = vx - vy;
+   console.log(num)
+   switch(num) {
+	    case 6: case 7: case 8:
+	        rk.innerHTML = "简单";
+	        break;
+	    case 9: case 10: case 11:
+	        rk.innerHTML = "一般";
+	        break;
+	    case 12: case 13: case 14:
+	        rk.innerHTML = "中等";
+	        break;
+	    case 15: case 16: case 17:
+	        rk.innerHTML = "难"
+	        break;
+	    case 18: case 19: case 20:
+	        rk.innerHTML = "很难"
+	        slide.style.width = 100 + "px";
+	        break;
+	    case 21: case 22:
+	  		rk.innerHTML = "特别难"
+	  		slide.style.width = 80 + "px";
+	  		break;
+	    case 23: case 24:
+	        rk.innerHTML = "难哭了"
+	        slide.style.width = 60 + "px";
+	        break;
+	}
+// 随机生成球与滑块的位置
+var beginGo = rand(100, 500)
+ball.style.left = beginGo + 40 + "px"
+slide.style.left = beginGo + "px"
+// 点击按钮开始游戏
+btn.onclick = function(){
+    btn.style.display = "none";
+    isRunning = true;
+    clearInterval(timer);
+    timer = setInterval(function() {
+    // 获取小球位置
+	var l = ball.offsetLeft;
+    var T = ball.offsetTop;
+    // 获取小球运动后的位置
+    var _l = l + vx;
+    var _T = T + vy;
+    // 弹到左右框框上的话
+    if (_l <= 0 || _l >= box.offsetWidth - ball.offsetWidth - 10) {
+    	vx = -vx;
+    }
+    // 弹到上框框的话
+    if (_T <= 0) {
+    	vy = -vy;
+    }
+    // 弹到下框框的话就KO了，提示一下然后重新开始
+    if (_T > box.offsetHeight - ball.offsetHeight){
+    	location.reload();
+    	alert("很遗憾，你被KO了");
+  	}
+  	// 球球改变位置
+  	ball.style.left = _l + "px";
+  	ball.style.top= _T + "px";
+    // 弹到滑块
+  	if (knock(ball,slide)){
+  		vy = -vy;
+  	}
+    // 弹到方块
+  	for (var j = 0; j < brick_.length; ++j) {
+  		if (knock(brick_[j], ball)){
+   			vy = -vy
+   			obrick.removeChild(brick_[j]);
+   			++sco;
+   			sc.innerHTML = sco;
+   			break;
+  		}
+  	}
+    // 没有方块了，你赢了！！重新开始
+  	if (brick_.length <= 0) {
+  		location.reload();
+  		alert("你赢了！恭喜！！")
+  	}
+ 	}, 20)
+}
+
+// 鼠标拖动滑块
+slide.onmousedown = function(e) {
+ 	// 获取滑块初始位置
+  	var e = e || window.event;
+    var offsetX = e.clientX - slide.offsetLeft;
+    if (isRunning == true) {
+    	document.onmousemove = function(e) {
+    		var e = e || window.event;
+    		var l = e.clientX - offsetX;
+    		if (l <= 0) {
+     			l = 0;
+    		}
+    		if (l >= box.offsetWidth - slide.offsetWidth - 10) {
+     			l = box.offsetWidth - slide.offsetWidth - 10;
+    		}
+    		slide.style.left = l + "px";
+    	}
+    }
+}
+document.onmouseup = function() {
+	document.onmousemove = null;
+}
+
+// 左右键控制滑块
+document.onkeydown = function(e) {
+    var e = e || window.event;
+    var code = e.keyCode || e.which;
+    var offsetX = slide.offsetLeft;
+    if (isRunning == true) {
+    	switch(code) {
+    	case 37:
+        	if (offsetX <= 0) {
+         		slide.style.left = 0
+         		break;
+         	}
+         	slide.style.left = offsetX * 4 / 5 + "px";
+         	break;
+        case 39:
+        	if (offsetX >= box.offsetWidth - slide.offsetWidth - 10) {
+         		slide.style.left = box.offsetWidth - slide.offsetWidth;
+         		break;
+         	}
+        	slide.style.left = (box.offsetWidth - slide.offsetWidth - offsetX) / 5 +offsetX + "px";
+        	break;
+        }
+    }
+}
+createBrick(72)
+// 创建方块
+function createBrick(n){
+    var oBrick = document.getElementById("brick")
+    // 搞出n个方块
+    for (var i = 0; i < n; ++i) {
+      var tmp = document.createElement("div");
+      tmp.style.backgroundColor = color();
+      oBrick.appendChild(tmp);
+    }
+    // 获取所有方块
+    var brick_ = obrick.getElementsByTagName("div")
+    // 获取所有方块左上角坐标
+    for (var i = 0; i < brick_.length; ++i) {
+    	brick_[i].style.left = brick_[i].offsetLeft + "px";
+    	brick_[i].style.top = brick_[i].offsetTop + "px";
+    }
+    // 所有方块绝对值定位
+    for (var i = 0; i < brick_.length; ++i) {
+    	brick_[i].style.position = "absolute";
+    }
+}
+// 方块随机颜色
+function color() {
+	var res = "#";
+    for (var i = 0; i < 6; ++i) {
+    	// 十进制 to 十六进制
+    	res += rand(0, 15).toString(16)
+   }
+   return res;
+}
+// 生成n和m之间的随机数
+function rand(n, m){
+    return n + parseInt(Math.random() * (m - n + 1));
+}
+// 球球是否弹到别的东东了
+function knock(node1,node2){
+    var l1 = node1.offsetLeft;
+    var r1 = node1.offsetLeft + node1.offsetWidth;
+    var t1 = node1.offsetTop;
+    var b1 = node1.offsetTop+node1.offsetHeight;
+    var l2 = node2.offsetLeft;
+    var r2 = node2.offsetLeft + node2.offsetWidth;
+    var t2 = node2.offsetTop;
+    var b2 = node2.offsetTop+node2.offsetHeight;
+    if (l2 > r1 || r2 < l1 || t2 > b1 || b2 < t1) {
+    	return false;
+    }
+    return true;
+}
+</script>
+</body>
+</html>
