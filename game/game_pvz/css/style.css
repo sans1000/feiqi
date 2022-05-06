@@ -3,6 +3,14 @@
 */
 body {
   background: #f5f5d8;
+  /* 水平居中 */
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  /* 垂直居中 */
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
 }
 .content-box {
   display: block;
