@@ -3,16 +3,9 @@
 */
 body {
   background: #f5f5d8;
-  /* 水平居中 */
-  left: 50%;
-  width: 30%;
-  margin-left: -15%;
-  /* 垂直居中 */
-  top: 50%;
-  height: 30%;
-  margin-top: -15%;
 }
 .content-box {
+  text-align: center;
   display: block;
   width: 900px;
   height: 600px;
@@ -20,6 +13,10 @@ body {
   overflow: hidden;
   border: 1px solid black;
   border-top: none;
+  position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 #canvas {
   display: block;
@@ -41,8 +38,9 @@ body {
 }
 .startGame-btn {
   position: absolute;
-  left: 240px;
-  top: 520px;
+	left: 50%;
+	top: 80%;
+	transform: translate(-50%,-50%);
   width: 321px;
   font-size: 18px;
   color: #FF0;
@@ -54,9 +52,10 @@ body {
   z-index: 9;
 }
 .cards-list {
-  display: none;
   position: absolute;
-  left: 0;
+  left:50%;
+  display: none;
+  left: 600;
   top: 0;
   width: 100px;
   z-index: 99;
