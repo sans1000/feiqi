@@ -20,7 +20,7 @@
     {
         background: var(--light_bg_color);
     }
-    body{cursor: url(https://cdn.jsdelivr.net/gh/caibhh/CDN/img/blog/default.cur),default;}
+    body{cursor: url(https://fastly.jsdelivr.net/gh/caibhh/CDN/img/blog/default.cur),default;}
     
     #footer {
         background: rgba(255,255,255,.15);
